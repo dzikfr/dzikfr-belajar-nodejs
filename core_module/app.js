@@ -20,10 +20,10 @@ fs.writeFile('core_module/test_async.txt', 'ini menulis ke file seacara asyncron
 
 
 //Membaca file
+//secara syncronus
 console.log(fs.readFileSync('core_module/test.txt','utf-8'))
 
-
-
+//secara asyncronus
 fs.readFile('core_module/test_async.txt', 'utf-8', (err, data) => {
     if (err) {
         throw err;
@@ -31,3 +31,4 @@ fs.readFile('core_module/test_async.txt', 'utf-8', (err, data) => {
         console.log(data);
     }
 });
+
